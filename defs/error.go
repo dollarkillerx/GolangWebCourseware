@@ -16,4 +16,6 @@ type ErrResponse struct {
 var (
 	// 定义参数错误返回类型
 	ErrorRequestBodyParseFailed = ErrResponse{Error:Err{Error:"Request body is not correct",ErrorCode:"001"},HttpSc:http.StatusBadRequest}
+	// 数据库错误
+	ErrorDBError = ErrResponse{Error:Err{Error:"DB ops failed",ErrorCode:"002"},HttpSc:http.StatusInternalServerError}
 )

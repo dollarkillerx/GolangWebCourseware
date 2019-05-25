@@ -7,8 +7,14 @@ import (
 )
 
 // 当返回错误信息时
-func SendErrorResponse(w http.ResponseWriter,errResp defs.ErrResponse)  {
-	w.WriteHeader(errResp.HttpSc)
-	bytes, _ := json.Marshal(errResp.Error)
+func SendErrorResponse(w http.ResponseWriter,response defs.ErrResponse)  {
+	w.WriteHeader(response.HttpSc)
+	bytes, _ := json.Marshal(response.Error)
 	w.Write(bytes)
+}
+
+// 返回自定义类型
+func SendNormalResponse(w http.ResponseWriter,resp string,sc int) {
+	w.WriteHeader(sc)
+	w.Write([]byte(resp))
 }
