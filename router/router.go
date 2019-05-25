@@ -12,5 +12,9 @@ func RegisterRouter() *httprouter.Router {
 
 	router.GET("/name/:name",Name)
 
+	router.GET("/registeredusers",RegisteredUsersGet)
+	router.POST("/registeredusers",RegisteredUsersPOST)
+	router.POST("/json",RegisteredUsersPOSTByJSON)
+
 	return router
 }
