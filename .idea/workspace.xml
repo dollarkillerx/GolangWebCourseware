@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04f2b76e-87c3-49a2-a76b-73d63cc3a014" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/defs/defs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/handlers.go" afterDir="false" />
-    </list>
+    <list default="true" id="04f2b76e-87c3-49a2-a76b-73d63cc3a014" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/router/handlers.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+            <state relative-caret-position="172">
+              <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -88,7 +84,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="807" />
+    <option name="x" value="914" />
     <option name="y" value="27" />
     <option name="width" value="1272" />
     <option name="height" value="994" />
@@ -104,16 +100,6 @@
             <path>
               <item name="GolangWebCourseware" type="b2602c69:ProjectViewProjectNode" />
               <item name="GolangWebCourseware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GolangWebCourseware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GolangWebCourseware" type="462c0819:PsiDirectoryNode" />
-              <item name="defs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GolangWebCourseware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GolangWebCourseware" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,9 +144,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="807" y="27" width="1272" height="994" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2246732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2246732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -428,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/router/handlers.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        <state relative-caret-position="172">
+          <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
         </state>
       </provider>
     </entry>
