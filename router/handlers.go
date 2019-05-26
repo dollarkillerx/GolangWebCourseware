@@ -36,19 +36,19 @@ func ShowAddUser(w http.ResponseWriter,r *http.Request,p httprouter.Params) {
 	maps[0] = "hello"
 	maps[1] = "golang"
 	maps[2] = "你好啊"
-	e = files.Execute(w,&Data{
-		Title:"注册",
-		Msg:"html/Template学习",
-		Score:i,
-		Maps:maps,
-	})
-
-	//e = files.Execute(w,map[string]interface{}{
-	//	"Request":r,
-	//	"Score":i,
-	//	"Msg":"html/Template学习",
-	//	"Maps":maps,
+	//e = files.Execute(w,&Data{
+	//	Title:"注册",
+	//	Msg:"html/Template学习",
+	//	Score:i,
+	//	Maps:maps,
 	//})
+
+	e = files.Execute(w,map[string]interface{}{
+		"Request":r,
+		"Score":i,
+		"Msg":"html/Template学习",
+		"Maps":maps,
+	})
 	if e != nil {
 		fmt.Println("填充数据出问题了",e.Error())
 		response.SendErrorResponse(w,defs.ErrorTemplateError)
