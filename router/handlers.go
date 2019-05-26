@@ -43,7 +43,7 @@ func ShowAddUser(w http.ResponseWriter,r *http.Request,p httprouter.Params) {
 		Maps:maps,
 	})
 
-	e = files.Execute(w,map[string]interface{}{
+	//e = files.Execute(w,map[string]interface{}{
 	//	"Request":r,
 	//	"Score":i,
 	//	"Msg":"html/Template学习",

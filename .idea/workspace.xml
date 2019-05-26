@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f2b76e-87c3-49a2-a76b-73d63cc3a014" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/static/utils/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GolangWebCourseware" beforeDir="false" afterPath="$PROJECT_DIR$/GolangWebCourseware" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbops/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/dbops/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defs/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/defs/error.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/router/handlers.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="46" selection-start-line="46" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="273">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="50" selection-end-column="8" />
               <folding>
                 <element signature="e#16#196#0" expanded="true" />
               </folding>
@@ -144,7 +137,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="830" />
+    <option name="x" value="710" />
     <option name="y" value="29" />
     <option name="width" value="1382" />
     <option name="height" value="1032" />
@@ -236,7 +229,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="830" y="29" width="1382" height="1032" extended-state="0" />
+    <frame x="710" y="29" width="1382" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.17616192" />
@@ -451,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/router/handlers.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="46" selection-start-line="46" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="273">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="50" selection-end-column="8" />
           <folding>
             <element signature="e#16#196#0" expanded="true" />
           </folding>
