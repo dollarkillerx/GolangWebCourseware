@@ -4,11 +4,15 @@ import (
 	"GolangWebCourseware/dbops"
 	"GolangWebCourseware/defs"
 	"GolangWebCourseware/response"
+	"GolangWebCourseware/utils"
 	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"html/template"
+	"io/ioutil"
 	"net/http"
+	"os"
 	"strconv"
+	"time"
 )
 
 
@@ -76,4 +80,47 @@ func AddUser(w http.ResponseWriter,r *http.Request,p httprouter.Params)  {
 	}
 
 	response.SendNormalResponse(w,"success",http.StatusCreated)
+}
+
+func uploadHandler(w http.ResponseWriter,r *http.Request,p httprouter.Params)  {
+	//限制文件大小
+	r.Body = http.MaxBytesReader(w,r.Body,defs.MAX_UPLOAD_SIZE)
+
+	//这个是解析,顺便设置表单最大大小
+	if err := r.ParseMultipartForm(defs.MAX_UPLOAD_SIZE);err != nil{
+		response.SendErrorResponse(w,defs.ErrorRequestBodyParseFailed)
+		return
+	}
+
+	file,_, e := r.FormFile("file")
+	if e != nil {
+		response.SendErrorResponse(w,defs.ErrorRequestBodyParseFailed)
+		return
+	}
+
+	bytes, _ := ioutil.ReadAll(file) //读文件
+
+	s, _ := utils.NewUUIDSimplicity()
+	e = ioutil.WriteFile((defs.FILE_DIR + s), bytes, 0666)
+	if e != nil {
+		response.SendErrorResponse(w,defs.ErrorRequestBodyParseFailed)
+		return
+	}
+
+}
+
+func downloadHandler(w http.ResponseWriter,r *http.Request,p httprouter.Params) {
+	vid :=p.ByName("vid-id")
+	vl := defs.FILE_DIR + vid
+
+	file, e := os.Open(vl)
+	if e != nil{
+		response.SendErrorResponse(w,defs.ErrorRequestBodyParseFailed)
+		return
+	}
+
+	//w.Header().Set("Content-Type","")
+	http.ServeContent(w,r,"",time.Now(),file)
+
+	defer file.Close()
 }
