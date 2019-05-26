@@ -7,6 +7,7 @@ import (
 	"log"
 )
 
+
 func RegisterUser(user *defs.User) error {
 	name := user.Name
 	password := user.Password

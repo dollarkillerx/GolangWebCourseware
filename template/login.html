@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>{{.Title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--国产浏览器开启webkit内核-->
+    <meta name="renderer" content="webkit">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://v4.bootcss.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body class="text-center">
+<form class="form-signin" onsubmit="return false;">
+    <h1 class="h3 mb-3 font-weight-normal">{{.Msg}}</h1>
+    <label for="inputEmail" class="sr-only">UserName</label>
+    <input type="text" id="inputUserName" class="form-control" placeholder="User Name" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <button class="btn btn-lg btn-primary btn-block" onclick="sub()">注册</button>
+    <p class="mt-5 mb-3 text-muted">&copy; DollarKiller 大雄|Golang教学</p>
+
+</form>
+
+<h1>
+    {{if gt .Score 90}}
+        score is A+
+    {{else if gt .Score 70}}
+        score is A
+    {{else if gt .Score 60}}
+        score is B
+    {{else}}
+        score is C
+    {{end}}
+</h1>
+
+<h1>
+    {{range $k,$v := .Maps}}
+        <br>
+        {{$k}} : {{$v}}
+        <br>
+    {{end}}
+</h1>
+
+<script src="/static/utils/utils.js"></script>
+<!--登录脚本-->
+<script>
+    function sub() {
+        let username = $("#inputUserName").val();
+        let password = $("#inputPassword").val();
+        if (!checkParamNotNullValidate(username) || !checkParamNotNullValidate(password)) {
+            alert("用户名或密码没有填写")
+            return false;
+        }
+        //如果填写了就封装请求体
+        let data = {
+          "name":username,
+          "password":password
+        };
+
+        //发送请求
+        let url =  window.location.protocol +"//"+ window.location.host + '/user/addUser';
+        console.log(url);
+        request(url,data,function () {
+            alert("登录成功")
+        },function () {
+            alert("登录失败" + url)
+        })
+    }
+</script>
+
+</body>
+</html>

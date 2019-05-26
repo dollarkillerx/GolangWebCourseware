@@ -18,4 +18,6 @@ var (
 	ErrorRequestBodyParseFailed = ErrResponse{Error:Err{Error:"Request body is not correct",ErrorCode:"001"},HttpSc:http.StatusBadRequest}
 	// 数据库错误
 	ErrorDBError = ErrResponse{Error:Err{Error:"DB ops failed",ErrorCode:"002"},HttpSc:http.StatusInternalServerError}
+	// 模板加载错误
+	ErrorTemplateError = ErrResponse{Error:Err{Error:"Template load failed",ErrorCode:"003"},HttpSc:http.StatusInternalServerError}
 )
