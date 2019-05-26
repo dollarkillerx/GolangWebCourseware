@@ -1,0 +1,4 @@
+{
+  "driverName":"mysql",
+  "dsn":"test1:dCKEtZbHdTFr7wdt@(127.0.0.1:3306)/test1?charset=utf8"
+}
