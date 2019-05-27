@@ -43,6 +43,13 @@ func WithdrawMoney(name string,deposit float64) error {
 }
 
 func TransferAccounts(form,to string,balance float64) error {
+	session := Engine.NewSession() // 获得session
+	defer session.Close() // session会消耗资源 所以要关闭
+	err := session.Begin() //开启事务
+	if err != nil {
+		return errors.New("session begin error")
+	}
+
 	account := &Account{Name: form}
 	_, e := Engine.Get(account)
 	if e != nil {
@@ -61,11 +68,17 @@ func TransferAccounts(form,to string,balance float64) error {
 
 	_, e = Engine.Where("name = ?",account.Name).Update(account)
 	if e!=nil{
+		session.Rollback() //回滚
+
 		return e
 	}
 
 	_, e = Engine.Where("name = ?",account2.Name).Update(account2)
-	return e
+	if e!=nil{
+		session.Rollback() //回滚
+	}
+
+	return session.Commit() //提交
 }
 
 func GetAccountsDESCId() ([]*Account,error) {
@@ -78,4 +91,16 @@ func DeleteAccountByName(name string) error {
 	account := &Account{Name: name}
 	_, e := Engine.Delete(account)
 	return e
+}
+
+
+func row() {
+	rows, _ := Engine.Rows(new(Account))
+	defer rows.Close()
+
+	account := new(Account)
+
+	for rows.Next()  {
+		rows.Scan(account)
+	}
 }
