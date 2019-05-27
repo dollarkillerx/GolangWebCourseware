@@ -16,6 +16,7 @@ func init()  {
 	if Err != nil {
 		panic(Err.Error())
 	}
+	Engine.ShowSQL(true)
 	SynchronousData()
 }
 
