@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04f2b76e-87c3-49a2-a76b-73d63cc3a014" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mysql/master.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/slave.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/syncPool/demo1/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="04f2b76e-87c3-49a2-a76b-73d63cc3a014" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,11 +109,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="538" />
-    <option name="y" value="66" />
-    <option name="width" value="1382" />
-    <option name="height" value="999" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="888" />
+    <option name="y" value="24" />
+    <option name="width" value="1717" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -240,7 +234,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1056" extended-state="7" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15544872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
